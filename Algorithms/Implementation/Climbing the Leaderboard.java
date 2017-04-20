@@ -41,8 +41,7 @@ class file
     file prev ; 
     int rank ; 
     int value;
-    
-    
+        
     file(){}
 
     public file( file prev, int rank, int value) {   
