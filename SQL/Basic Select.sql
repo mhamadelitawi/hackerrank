@@ -25,13 +25,13 @@ select * from city where id = 1661
 
 
 
-Japanese Cities' Attributes:
-============================
+Japanese Cities Attributes:
+=============================
 select * from city where COUNTRYCODE  = 'JPN'
 
 
 
-Japanese Cities' Names:
+Japanese Cities Names:
 =======================
 select name from City where COUNTRYCODE = 'JPN'
 
@@ -76,3 +76,52 @@ SELECT DISTINCT city FROM station WHERE city REGEXP "^[aeiou].*";
 
 Weather Observation Station 7:
 ==============================
+SELECT DISTINCT city FROM station  WHERE CITY REGEXP '[aeiou]$' ;
+
+
+
+Weather Observation Station 8:
+==============================
+SELECT DISTINCT CITY FROM STATION WHERE city REGEXP '^[aeiou].*[aeiou]$'
+
+
+
+Weather Observation Station 9:
+==============================
+SELECT DISTINCT city FROM station WHERE city REGEXP "^[^aeiou].*";
+
+
+
+Weather Observation Station 10:
+===============================
+SELECT DISTINCT city FROM station  WHERE CITY REGEXP '[^aeiou]$' ;
+
+
+
+Weather Observation Station 11:
+===============================
+SELECT DISTINCT CITY FROM STATION WHERE CITY NOT REGEXP '^[aeiou].*[aeiou]$';
+
+
+
+Weather Observation Station 12:
+===============================
+SELECT DISTINCT CITY FROM STATION WHERE city REGEXP '^[^aeiou].*[^aeiou]$'
+
+
+
+Higher Than 75 Marks:
+=====================
+SELECT NAME FROM STUDENTS WHERE MARKS > 75 ORDER BY RIGHT(NAME, 3),ID;
+
+
+
+Employee Names:
+===============
+select name from Employee order by name
+
+
+
+Employee Salaries:
+==================
+SELECT NAME FROM EMPLOYEE WHERE SALARY > 2000 AND MONTHS < 10 ORDER BY EMPLOYEE_ID ASC;
